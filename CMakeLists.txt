@@ -305,9 +305,7 @@ elseif(PLATFORM_TVOS)
 endif()
 
 add_subdirectory(Primitives)
-include_directories(Primitives/interface)
 add_subdirectory(Platforms)
-include_directories(Platforms/interface)
 
 add_library(
         Diligent-Log SHARED

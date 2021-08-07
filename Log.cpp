@@ -3,7 +3,6 @@
 //
 
 #include "Log.h"
-
 #include "Primitives/interface/Errors.hpp"
 
 void Log::Log_String(const Log::SEVERITY & severity, const char * msg) {

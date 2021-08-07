@@ -53,6 +53,16 @@ public:
     }
 
     template<typename... RestArgsType>
+    static void Info(const RestArgsType &... Args) {
+        Log_With_Severity(INFO, Args...);
+    }
+
+    template<typename... RestArgsType>
+    static void Error(const RestArgsType &... Args) {
+        Log_With_Severity(ERROR, Args...);
+    }
+
+    template<typename... RestArgsType>
     static void Error_And_Throw(const RestArgsType &... Args) {
         Log_With_Severity(FATAL, Args...);
     }
