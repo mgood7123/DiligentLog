@@ -27,7 +27,7 @@ target_link_libraries(Diligent-AndroidPlatform_LOG
 PRIVATE
     log
     android
-    Diligent-BuildSettings 
+    Diligent-BuildSettings__LOG 
 PUBLIC
     Diligent-PlatformInterface
     Diligent-BasicPlatform_LOG

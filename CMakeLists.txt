@@ -109,7 +109,7 @@ if(MSVC)
     # - Enable whole program optimization (/GL)
     # - Enable string pooling (/GF)
     set(MSVC_ALL_RELEASE_COMPILE_OPTIONS /wd4189 /GR- /GL /GF)
-    #target_compile_options(Diligent-BuildSettings INTERFACE "$<$<CONFIG:RELEASE>:/wd4189 /Ot")
+    #target_compile_options(Diligent-BuildSettings__LOG INTERFACE "$<$<CONFIG:RELEASE>:/wd4189 /Ot")
     # In RELEASE mode:
     # - Set favor fast code option (/Ot)
     # - Enable intrinsic functions (/Oi)
@@ -124,7 +124,7 @@ if(MSVC)
     target_compile_options(Diligent-BuildSettings__LOG INTERFACE "$<$<CONFIG:RELWITHDEBINFO>:${MSVC_RELWITHDEBINFO_COMPILE_OPTIONS}>")
     # !!!NOTE!!! For some reason above is the only form of generator expression that works
     # For instance, this way
-    # target_compile_options(Diligent-BuildSettings INTERFACE "$<$<CONFIG:RELEASE>:/Ot>")
+    # target_compile_options(Diligent-BuildSettings__LOG INTERFACE "$<$<CONFIG:RELEASE>:/Ot>")
     # does not work as expected
 else()
     # Todo: use __attribute__((always_inline)), but it needs to be defined in a header file

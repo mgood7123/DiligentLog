@@ -30,7 +30,7 @@ PUBLIC
 
 target_link_libraries(Diligent-BasicPlatform_LOG
 PRIVATE
-    Diligent-BuildSettings 
+    Diligent-BuildSettings__LOG 
 PUBLIC
     Diligent-Primitives
 )
