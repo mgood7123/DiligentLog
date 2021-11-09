@@ -15,6 +15,9 @@ set(PLATFORM_INTERFACE_HEADERS
 
 add_subdirectory(Basic)
 
+set(WAS_SHARED ${BUILD_SHARED_LIBS})
+set(BUILD_SHARED_LIBS OFF CACHE BOOL " " FORCE)
+
 if(PLATFORM_WIN32)
 	add_subdirectory(Win32)
 	add_library(Diligent-TargetPlatform ALIAS Diligent-Win32Platform)
@@ -33,3 +36,5 @@ elseif(PLATFORM_APPLE)
 else()
 	message(FATAL_ERROR "No PLATFORM_XXX variable defined. Make sure that 'DiligentCore' folder is processed first")
 endif()
+
+set(BUILD_SHARED_LIBS ${WAS_SHARED} CACHE BOOL " " FORCE)
